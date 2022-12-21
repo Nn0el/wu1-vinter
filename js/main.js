@@ -41,7 +41,7 @@ function step(timestamp) {
         element.draw();
     });
 
-    spawnParticles(5);
+    spawnParticles(4);
 
     window.requestAnimationFrame(step);
 }
@@ -53,10 +53,13 @@ const Particle = function(x, y, color)
     let particle = {};
     particle.x = x;
     particle.y = y;
-    particle.dy = 1 + (Math.random()*3);
-    particle.dx = -1 + (Math.random()*2);
-    particle.color = SNOW_COLOR;
-    particle.size = 2 + Math.floor(Math.random()*2);
+    Intl  = 2 + (Math.random()*200);
+    Int2  = 2 + (Math.random()*5);
+    Int3 = 2 + (Math.random()*5);
+    particle.dy = 2 + (Math.random()*5);
+    particle.dx = -2 + (Math.random()*5);
+    particle.color = "rgba(247, 186, 238,0.8)";
+    particle.size = 1 + Math.floor(Math.random()*32);
     particle.draw = function()
     {
         ctx.beginPath();
@@ -78,6 +81,6 @@ const Particle = function(x, y, color)
 
 function spawnParticles(amount) {
     for(let i = 0; i < amount; i++) {
-        particles.push(Particle(randomInt(0, canvas.width), 0, 'rgba(235, 235, 235, 0.8)'));
+        particles.push(Particle(randomInt(0, canvas.width), 0, 'rgba(247, 186, 238, 0.8)'));
     }
 }

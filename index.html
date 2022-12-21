@@ -7,10 +7,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vinter</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        html, body {
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+        }
+        body {
+            font-family: sans-serif;
+            animation: psykadelisk 0.1s linear infinite;
+        }
+        main {
+            width: min(80ch, 100vw - 4rem);
+            margin-inline: auto;
+            display: grid;
+            place-items: center;
+            grid-template-areas: "stack";
+            height: 100%;
+        }
+        img {
+            border-radius: 30%;
+            max-width: 30%;
+            width: 30%;
+            animation: rotate 5s linear infinite;
+            grid-area: stack;
+            z-index: -1;
+        }
+        h1 {
+            grid-area: stack;
+            font-size: 5rem;
+            animation: psykadelisk 0.1s linear infinite;
+            text-align: center;
+            background-color: transparent !important;
+        }
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes psykadelisk {
+            6% {
+                color: rgb(255, 230, 0);
+                background-color: rgb(0, 0, 0);
+            }
+            25% {
+                color: blue;
+                background-color: blue;
+            }
+            50% {
+                color: rgb(255, 0, 166);
+                background-color: rgb(125, 96, 96);
+            }
+            75% {
+                color: rgb(2, 45, 2);
+                background-color: rgb(113, 185, 113);
+            }
+            100% {
+                color: rgb(252, 252, 0);
+                background-color: rgb(164, 235, 245);
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <h1>SLASK</h1>
+    <h1>Casper jul Casper jul</h1>
+    <h2>Mindre text</h2>
+    <h3>Minsta text</h3>
+    <li>
+    <img src="CaspersJul.jpg" alt="">
+    <img src="Åseda.jpg" alt="">
+    <img src="SkummigaTomtar.jpg" alt="">
+    <img src="protintomte.jpg" alt="">
+</li>
     <script src="js/main.js"></script>
 </body>
 
